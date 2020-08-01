@@ -2,25 +2,19 @@ import React from 'react';
 import { Container } from 'react-bootstrap'
 import GlobalContext from './contexts/Global'
 import { GetJson, PostJson } from './services/api/AxiosApi' 
+import { Route } from "react-router-dom";
+import Home from './pages/home/Home'
 
 function App() {
 
-  GetJson('/api/', {}, callback )
-  PostJson('/api/post/', {}, callback)
-
-  function callback(json){ console.log(json) }
-
   return (
-  <GlobalContext.Provider value={{}}>
-    <Container fluid>
-    
+    <GlobalContext.Provider value={{}}>
+      <Container fluid>
+        <Route exact path='/' component={Home}/>
 
 
-
-
-
-    </Container>
-  </GlobalContext.Provider>
+      </Container>
+    </GlobalContext.Provider>
   );
 }
  
