@@ -1,11 +1,12 @@
 import React from 'react';
 import { Container } from 'react-bootstrap'
 import GlobalContext from './contexts/Global'
-import { Get } from './services/api/AxiosApi' 
+import { GetJson, PostJson } from './services/api/AxiosApi' 
 
 function App() {
 
-  Get('http://localhost:5000/', {}, callback )
+  GetJson('/api/', {}, callback )
+  PostJson('/api/post/', {}, callback)
 
   function callback(json){ console.log(json) }
 

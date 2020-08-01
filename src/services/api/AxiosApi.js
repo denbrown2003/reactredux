@@ -1,18 +1,32 @@
 import axios from 'axios';
 
-function Get(url, data, callback){
+function GetJson(url, data, callback){
     axios.
     get(url, data,{
         'Content-Type': 'application/json',
       })
-      .then(res => res.json())
-      .then(json => {callback(json)})
+      .then(result => {
+          if (result.status == 200) callback(result.data)
+        })
       .catch(error => {
         console.log(error)
-      })
-   
+      }) 
+}
+
+function PostJson(url, data, callback){
+    axios.
+    post(url, data, {
+        'Content-Type': 'application/json',
+    })
+    .then(result => {
+        if (result.status == (200 || 201)) callback(result.data)
+    })
+      .catch(error => {
+        console.log(error)
+      }) 
 }
 
 export { 
-    Get 
+    GetJson,
+    PostJson 
 }
