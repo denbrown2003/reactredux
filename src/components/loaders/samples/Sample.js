@@ -9,7 +9,7 @@ class Sample extends React.Component {
     }
 
     onBtnClick(){
-        this.props.clickButton('clicked');
+        this.props.clickButton({});
     }
 
     render(){

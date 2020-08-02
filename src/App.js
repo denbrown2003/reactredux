@@ -7,11 +7,12 @@ import Home from './pages/home/Home'
 import rootReducer from './store/reducers'
 
 import thunk from 'redux-thunk'
+import logger from 'redux-logger'
 import { createStore, applyMiddleware} from 'redux'
 import { connect, Provider } from 'react-redux'
 
 const App = () => {
-  const store = createStore(rootReducer)
+  const store = createStore(rootReducer, applyMiddleware(logger, thunk))
 
   return (
       <Provider store={store}>
