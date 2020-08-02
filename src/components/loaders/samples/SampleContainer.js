@@ -7,10 +7,11 @@ import { BUTTON_CLICK, clickButton } from '../../../store/sample/actions'
 class SampleContainer extends React.Component{
 
     render(){
+        return(
         <Sample 
             title={this.props.title}
-            onBtnClick={this.props.clickButton}
-        />
+            clickButton={this.props.clickButton}
+        />);
     }
 }
 
