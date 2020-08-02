@@ -22,7 +22,7 @@ class Auth extends React.Component{
                 </Form.Text>
             </Form.Group>
 
-            <Button>Click</Button>
+            <Button variant="warning">Click</Button>
         </Form>
         )
     }
