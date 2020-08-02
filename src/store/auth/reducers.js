@@ -1,3 +1,5 @@
+import { CHANGE_EMAIL1, CHANGE_EMAIL2 } from './actions'
+
 const defaultState = {
     email: '',
     email2: '',
@@ -5,7 +7,10 @@ const defaultState = {
 
 const AuthReducer = (state, action) => {
     switch(action.type){
-       
+        case CHANGE_EMAIL1:
+            return { ...state, email1: action.payload}
+        case CHANGE_EMAIL2:
+            return { ...state, email2: action.payload}
     }
     return state;
 }
