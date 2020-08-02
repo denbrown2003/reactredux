@@ -5,7 +5,7 @@ const defaultState = {
     email2: '',
 }
 
-const AuthReducer = (state, action) => {
+const AuthReducer = (state = defaultState, action) => {
     switch(action.type){
         case CHANGE_EMAIL1:
             return { ...state, email1: action.payload}
