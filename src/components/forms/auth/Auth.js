@@ -21,7 +21,7 @@ class Auth extends React.Component{
                 <Col xs={6} md={4}>
                 
                     <Form>
-                        <Form.Group controlId="formBasicEmail">
+                        <Form.Group controlId="formBasicEmail1">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control 
                                 type="email" 
@@ -34,7 +34,7 @@ class Auth extends React.Component{
                             </Form.Text>
                         </Form.Group>
 
-                        <Form.Group controlId="formBasicEmail">
+                        <Form.Group controlId="formBasicEmail2">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control 
                                 type="email" 

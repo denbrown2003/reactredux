@@ -1,8 +1,8 @@
 import { CHANGE_EMAIL1, CHANGE_EMAIL2 } from './actions'
 
 const defaultState = {
-    email: '',
-    email2: '',
+    email1: 'test@mai.com',
+    email2: 'test2@ff.com',
 }
 
 export const AuthReducer = (state = defaultState, action) => {
