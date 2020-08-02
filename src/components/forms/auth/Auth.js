@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, Button, Row, Col } from 'react-bootstrap'
+import { Form, Button, Row, Col, Container } from 'react-bootstrap'
 
 class Auth extends React.Component{
     constructor(props){
@@ -46,6 +46,9 @@ class Auth extends React.Component{
                                 We'll never share your email with anyone else.
                             </Form.Text>
                         </Form.Group>
+                        <Container>
+                            <strong>{`${this.props.email1}  ${this.props.email2}`}</strong>
+                        </Container>
 
                         <Button variant="warning">Click</Button>
                     </Form>
