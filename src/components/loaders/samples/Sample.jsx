@@ -9,14 +9,14 @@ class Sample extends React.Component {
     }
 
     onBtnClick(){
-
+        this.props.onBtnClick('clicked');
     }
 
     render(){
         return(
             <Button
                 onCkick={this.onBtnClick}
-            >Click Me</Button>
+        >{this.props.title}</Button>
         )
     }
 }
