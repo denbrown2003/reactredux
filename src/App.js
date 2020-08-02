@@ -5,16 +5,21 @@ import { GetJson, PostJson } from './services/api/AxiosApi'
 import { Route } from "react-router-dom";
 import Home from './pages/home/Home'
 
-function App() {
+import thunk from 'redux-thunk'
+import { createStore, applyMiddleware} from 'redux'
+import { connect, Provider } from 'react-redux'
+
+const App = () => {
+
 
   return (
-    <GlobalContext.Provider value={{}}>
+
       <Container fluid>
         <Route exact path='/' component={Home}/>
 
 
       </Container>
-    </GlobalContext.Provider>
+  )
   );
 }
  
