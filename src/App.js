@@ -8,11 +8,15 @@ import rootReducer from './store/reducers'
 
 import thunk from 'redux-thunk'
 import logger from 'redux-logger'
+import createSagaMiddleware from 'redux-saga'
 import { createStore, applyMiddleware} from 'redux'
 import { connect, Provider } from 'react-redux'
+import { watchLoadData } from './store/sagas'
 
 const App = () => {
-  const store = createStore(rootReducer, applyMiddleware(logger, thunk))
+  const sagaMiddleware = createSagaMiddleware();
+  const store = createStore(rootReducer, applyMiddleware(logger, sagaMiddleware))
+  sagaMiddleware.run(watchLoadData);
 
   return (
       <Provider store={store}>
