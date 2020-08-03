@@ -1,6 +1,13 @@
 import React from 'react'
 import { Table } from 'react-bootstrap'
 
+/* 
+component props
+th={['#', 'title', "desciption", 'time']}
+array={[
+    {id: 12, name: 'some name', desciption: 'some description', time: 'sometime'}
+]}
+*/
 
 const DarkTable = (props) => {
     const headers = props.th;
