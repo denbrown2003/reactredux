@@ -1,4 +1,4 @@
-import React, { useContext, Provider } from 'react'
+import React  from 'react'
 import { Container } from 'reactstrap'
 import { contextPanel } from '../../contexts/contextPanel'
 
@@ -6,7 +6,9 @@ import { contextPanel } from '../../contexts/contextPanel'
 const Panel = () => {
 
     return(<Container>
-        <contextPanel.Provider value={{}}>
+        <contextPanel.Provider value={{
+            title:'initial title'
+        }}>
         
 
 
