@@ -2,23 +2,28 @@ import React from 'react'
 import { Table } from 'react-bootstrap'
 
 
-const DarkTable = () => {
+const DarkTable = (props) => {
+    const headers = props.th;
+    const data = props.array;
     return(
         <Table striped bordered hover variant="dark">
             <thead>
                 <tr>
-                    <th>#</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Username</th>
+                    {headers.map((item, index) => {
+                        return(
+                        <th key={index}>{item}</th>
+                        )
+                    })}
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>3</td>
-                    <td colSpan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
+            <tbody>             
+                {data.map((item, idx)=> {
+                    return (<tr key={idx}>
+                        {Object.keys(item).map((key, idx)=> {
+                           return <td key={idx}>{item[key]}</td>;
+                        })}
+                    </tr>)
+                })}
             </tbody>
         </Table>
     )
