@@ -6,7 +6,7 @@ import { contextPanel } from '../../contexts/contextPanel'
 const Panel = () => {
 
     return(<Container>
-        <contextPanel.Provider value={}>
+        <contextPanel.Provider value={{}}>
         
 
 
