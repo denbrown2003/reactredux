@@ -1,9 +1,9 @@
 import React, { useContext, Provider } from 'react'
 import { Container } from 'reactstrap'
+import { contextPanel } from '../../contexts/contextPanel'
+
 
 const Panel = () => {
-
-    const contextPanel = useContext();
 
     return(<Container>
         <contextPanel.Provider value={}>
